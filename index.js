@@ -1,6 +1,4 @@
-const { nextISSTimesForMyLocation } = require("./iss");
-
-const nextISSTimesForMyLocationCallback = (error, passTimes) => {
+const printPassTimes = (error, passTimes) => {
   if (error) {
     return console.log("It didn't work!", error);
   }
@@ -11,4 +9,4 @@ const nextISSTimesForMyLocationCallback = (error, passTimes) => {
   }
 };
 
-nextISSTimesForMyLocation(nextISSTimesForMyLocationCallback);
+module.exports = { printPassTimes };
